@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .login-img{
+            width: 20px;
+            height: 20px;
+        }
+
+        html,body{
+            display: grid;
+            height: 100%;
+            place-items: center;
+            background-color: #dee2e6;
+        }
+
+        .container{
+            width: 380px;
+            background: #fff;
+            border-radius: 5px;
+        }
+
+        .title{
+            line-height: 80px;
+            background: black;
+            color: whitesmoke;
+            padding-left: 20px;
+            border-radius: 5px 5px 0 0;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        form{
+            padding: 30px 20px 25px 20px;
+        }
+
+        .row{
+            height: 45px;
+            background: #dee2e6;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        input{
+            height: 100%;
+            width: 100%;
+            padding-left: 60px;
+            outline: none;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        svg{
+            position: absolute;
+            width: 40px;
+            height: 96%;
+            font-size: 18px;
+            background: black;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        .button input{
+            padding-left: 0px;
+            background: black;
+            color: whitesmoke;
+            cursor: pointer;
+        }
+
+        .pass{
+            margin: -10px 0 15px 0;
+        }
+
+        .pass a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .pass a:hover{
+            text-decoration: underline;
+        }
+        
+
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title"><span>Admin Login</span></div>
+        <form action="#">
+        <div class="row">
+            <i><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#141415}</style><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg></i>
+            <input id="username" name="username" type="text" placeholder="Enter name" required>
+        </div>
+        <div class="row">
+            <i><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#efeff5}</style><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg></i>
+            <input id="password" name="password" type="password" placeholder="Enter password" required>
+        </div>
+        <div class="pass"><a href="#">Forgot password?</a></div>
+        <div class="row button">
+            <input onclick="display();" type="submit" value="Login">
+        </div>
+    </form>
+    </div>
+    
+ <script>
+            function display() {
+                const username = document.getElementById('username').value;
+                const pass = document.getElementById('password').value;
+
+                const validUsername = 'admin';
+                const validEmail = 1234;
+
+                if (username == validUsername && pass == validEmail){
+                window.open('./Admin/index.php');
+                } else {
+                alert('invalid');
+            }
+            }
+        </script>
+</body>
+</html>
